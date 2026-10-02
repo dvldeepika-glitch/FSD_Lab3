@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session Management</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            padding: 40px;
+        }
+
+        .container {
+            max-width: 650px;
+            margin: auto;
+            background: white;
+            padding: 35px;
+            border-radius: 12px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 25px;
+        }
+
+        .details {
+            background: #eeeeee;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .details p {
+            font-size: 17px;
+            margin: 15px 0;
+        }
+
+        .buttons {
+            margin-top: 25px;
+            display: flex;
+            gap: 10px;
+        }
+
+        a {
+            flex: 1;
+            text-align: center;
+            padding: 12px;
+            background: #333;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+        }
+
+        a:hover {
+            background: #555;
+        }
+
+        .destroy {
+            background: #c62828;
+        }
+
+        .destroy:hover {
+            background: #a51d1d;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Session Management</h1>
+
+        <div class="subtitle">
+            Part (a) - Express Session Demonstration
+        </div>
+
+        <div class="details">
+
+            <p>
+                <strong>Username:</strong>
+                <%= username %>
+            </p>
+
+            <p>
+                <strong>Session ID:</strong>
+                <%= sessionId %>
+            </p>
+
+            <p>
+                <strong>Visit Count:</strong>
+                <%= visitCount %>
+            </p>
+
+            <p>
+                The session data is stored and maintained
+                between requests.
+            </p>
+
+        </div>
+
+        <div class="buttons">
+
+            <a href="/set-session">
+                Update Session
+            </a>
+
+            <a href="/destroy-session" class="destroy">
+                Destroy Session
+            </a>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
